@@ -9,7 +9,22 @@
     <title>Temperature Converter</title>
 </head>
 <body>
-    <h1>Hi</h1>
+    <h1 class="text-center">Temperature Converter</h1>
+        <div class="form-group form-control-lg">
+            <label for="exampleFormControlInput1">Temperature</label>
+            <label class="radio-inline float-right" id="myRadioC"><input type="radio" name="optradio">C°</label>
+            <label class="radio-inline float-right" id="myRadioF"><input type="radio" name="optradio">F°</label>
+            <input type="temperature" class="form-control" id="exampleFormControlInput1" placeholder="Enter Temperature Here">
+            <div class="float-right">
+                <button type="button" class="btn btn-primary btn-lg" id="convert">Convert</button>
+                <button type="button" class="btn btn-primary btn-lg" id="clear">Clear</button>
+            </div>
+        </div>
+        <div class="card" id="displayCard" style="width: 12rem;">
+            <div class="card-body">
+                <h2 class="card-text" id="convertedTemp"></h2>
+            </div>
+        </div>
     <script src="main.js"></script>
 </body>
 </html>
