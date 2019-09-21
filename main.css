@@ -20,11 +20,13 @@ margin-top: 5%;
     padding-right: 1em;
 }
 
-#displayCard {
-    margin: 0 auto;
-    margin-top: 10%;
+ #displayCard {
     height: 12rem;
-}
+    width: 12rem;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10%;
+} 
 
 #convertedTemp {
     text-align: center;
