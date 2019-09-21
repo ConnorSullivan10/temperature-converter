@@ -4,36 +4,51 @@ const printToDom = (toPrint, divId) => {
   document.getElementById(divId).innerHTML = toPrint;
 }
 
-let formInput = document.getElementById("exampleFormControlInput1").value;
-
-const toCelsius =  () => {
-  ((formInput-32)*5/9).join(" °C");
-};
+ const toCelsius =  () => {
+   let domString = ``;
+   let formInput = (document.getElementById("exampleFormControlInput1").value-32)*5/9;
+   let celsius = Math.round(formInput)//.join(" °C");
+   domString += `<h3>${celsius}</h3>`
+   printToDom(domString, "convertedTemp")
+   if (celsius > 32 ) {
+    document.getElementById("convertedTemp").style.color="red";
+  } else if ( celsius < 0) {
+    document.getElementById("convertedTemp").style.color="blue";
+  } else {
+    document.getElementById("convertedTemp").style.color="green";
+  }
+ };
 
 const toFahrenheit =  () => {
-  (formInput*9/5+32).join(" °F");
+  let domString = ``;
+  let formInput = document.getElementById("exampleFormControlInput1").value*9/5+32;
+  let fahrenheit = Math.round(formInput)//.join(" °F");
+  domString += `<h3>${fahrenheit}</h3>`
+  printToDom(domString, "convertedTemp")
+  if (fahrenheit > 90 ) {
+    document.getElementById("convertedTemp").style.color="red";
+  } else if ( fahrenheit < 32) {
+    document.getElementById("convertedTemp").style.color="blue";
+  } else {
+    document.getElementById("convertedTemp").style.color="green";
+  }
 };
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
-const determineConverter = (e) => {
-  const fCheck = document.getElementById("myRadioF").checked;
-  const cCheck = document.getElementById("myRadioC").checked;
-  let domString = ``;
-  // console.log("event", e);
-  if (fCheck) {
-    domString = toFahrenheit();
-  } else if (cCheck) {
-    domString = toCelsius();
-  }
-  printToDom(domString, "convertedTemp")
-};
-console.log(determineConverter);
+ const determineConverter = (e) => {
+   if (document.getElementById("myRadioF").checked) {
+     toFahrenheit();
+    // console.log(toFahrenheit);
+   } else if (document.getElementById("myRadioC").checked) {
+     toCelsius();
+   }
+ };
 
-  const clearConverter = (e) => {
-    printToDom([], "convertedTemp");
-    formInput == 0;
-  }
+ const clearConverter = (e) => {
+     printToDom([], "convertedTemp");
+     document.getElementById("exampleFormControlInput1").value = '';
+   }
 
   // Assign a function to be executed when the button is clicked
   const convertButton = document.getElementById("convert");
