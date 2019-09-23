@@ -56,3 +56,18 @@ const toFahrenheit =  () => {
 
   convertButton.addEventListener("click", determineConverter);
   clearButton.addEventListener("click", clearConverter);
+
+//   document.querySelector('#exampleFormControlInput1').addEventListener('keypress', function (e) {
+//     if (e.key === 'Enter') {
+//       determineConverter// code for enter
+//     }
+// });
+
+window.addEventListener('keyup',function(e){
+  console.log(e.keyCode);
+    if (e.keyCode === 13) {
+      e.preventDefault();
+       determineConverter();
+  }
+});
+
