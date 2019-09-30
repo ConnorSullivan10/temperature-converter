@@ -4,10 +4,10 @@
 Use this application to convert the temperature that you enter into your selected conversion of Fahrenheit or Celsius, and print the result in the color of whether the temperature is hot (red), cold (blue), or in between (green). All you have to do is enter your number of choice into the form, select the radio button of the corresponding conversion you'd like to see, and finally click the convert button. You can clear the entry form and printed result by clicking the clear button.
 
 ## Screenshots
-![Temperature Converter Preview]()
-![Temperature Converter Preview]()
-![Temperature Converter Preview]()
-![Temperature Converter Preview]()
+![Temperature Converter Preview](https://raw.githubusercontent.com/ConnorSullivan10/temperature-converter/master/screenshots/temperatureconvertermainpage.PNG)
+![Temperature Converter Preview](https://raw.githubusercontent.com/ConnorSullivan10/temperature-converter/master/screenshots/tempconverter2.PNG)
+![Temperature Converter Preview](https://raw.githubusercontent.com/ConnorSullivan10/temperature-converter/master/screenshots/tempconverter3.PNG)
+![Temperature Converter Preview](https://raw.githubusercontent.com/ConnorSullivan10/temperature-converter/master/screenshots/tempconverter4.PNG)
 
 ## How to run
 * Clone down this project
